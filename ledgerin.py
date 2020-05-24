@@ -20,6 +20,7 @@ sync_down = "rclone sync {rname}:{rpath}/finance.ledger  data/".format(rname=con
 sync_up =  "rclone sync data/finance.ledger {rname}:{rpath}".format(rname=config['remotename'], rpath=config['remotepath'])
 
 app = Flask(__name__)
+app.static_folder = 'static'
 
 @app.route('/')
 def index():
