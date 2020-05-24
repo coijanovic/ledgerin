@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(45deg, #d53369 0%, #daae51 100%);
+    background: linear-gradient(90deg, #8360c3 0%, #2ebf91 100%);
 }
 label {
     color: black;
@@ -9,8 +9,8 @@ label {
 label, select, input {
     display: block;
 }
-button, select, input {
-    padding: 10px;
+select, input {
+    padding: 25px;
     margin: 20px;
     margin-left:0px;
 }
@@ -23,4 +23,24 @@ button, select, input {
 }
 button {
     float: right;
+    padding: 0px;
+    margin: 20px;
+    margin-right: 0px;
+    color: black;
+    background: transparent;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 15vw;
+    font-style: italic;
+    border: none;
+}
+
+CSS
+/* Hide HTML5 Up and Down arrows. */
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
 }
