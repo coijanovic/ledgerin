@@ -1,0 +1,33 @@
+# This is the default default default config file for ledgerweb
+#
+# 1. flask
+hostip: 0.0.0.0
+hostport: 5000
+
+# 2. rclone
+remotename: Nextcloud
+remotepath: /accounting/
+
+# 3. ledger
+currency: EUR
+accounts:
+- Assets:Checking
+- Expenses:Food
+- Income:Paycheck
+
+favs:
+- name: EDEKA
+  from: Assets:Checking
+  to: Expenses:Food
+- name: Rewe
+  from: Assets:Checking
+  to: Expenses:Food
+- name: Alnatura
+  from: Assets:Checking
+  to: Expenses:Food
+
+reports:
+- name: Balances
+  cmd: ledger bal -f data/finance.ledger -C Assets
+- name: Expenses this month
+  cmd: ledger bal -f data/finance.ledger -C --period="this month" Expenses
