@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form action="/fsubmit" method="get">
-        <label for="fselect">I was at</label>
-        <select class="form-control" name="fselect" id="fselect">
+    <form action="/submit" method="get">
+        <label for="select">I was at</label>
+        <select class="form-control" name="select" id="select">
             {% for f in favs %}
             <option>{{ f }}</option>
             {% endfor %}
         </select>
-        <label for"famount">and spent</label>
-        <input class="form-control" type="number" name="famount" step="0.01" id="famount">
+        <label for"amount">and spent</label>
+        <input class="form-control" type="number" name="amount" step="0.01" id="amount">
         <button type="submit" class="btn btn-dark my-1">GO!</button>
     </form>
 {% endblock %}
