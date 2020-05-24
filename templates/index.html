@@ -1,22 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="row">
-        <p class="lead m-3">This is an input tool for <code>ledger-cli</code></p>
-    </div>
     <form action="/fsubmit" method="get">
-        <div class="form-group">
-            <label for="fselect">Recipient</label>
-            <select class="form-control" name="fselect" id="fselect">
-                {% for f in favs %}
-                <option>{{ f }}</option>
-                {% endfor %}
-            </select>
-        </div>
-        <div class="form-group">
-            <label for"famount">Amount</label>
-            <input class="form-control" type="number" name="famount" step="0.01" id="famount">
-        </div>
-        <button type="submit" class="btn btn-dark my-1">Submit</button>
+        <label for="fselect">i was at</label>
+        <select class="form-control" name="fselect" id="fselect">
+            {% for f in favs %}
+            <option>{{ f }}</option>
+            {% endfor %}
+        </select>
+        <label for"famount">and spent</label>
+        <input class="form-control" type="number" name="famount" step="0.01" id="famount">
+        <button type="submit" class="btn btn-dark my-1">GO!</button>
     </form>
 {% endblock %}

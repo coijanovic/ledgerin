@@ -1,3 +1,26 @@
 body {
     background: linear-gradient(45deg, #d53369 0%, #daae51 100%);
 }
+label {
+    color: black;
+    font-size: 15vw;
+    font-family: 'Noto Sans', sans-serif;
+}
+label, select, input {
+    display: block;
+}
+button, select, input {
+    padding: 10px;
+    margin: 20px;
+    margin-left:0px;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+button {
+    float: right;
+}
