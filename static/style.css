@@ -1,8 +1,8 @@
 body {
-    background: linear-gradient(90deg, #8360c3 0%, #2ebf91 100%);
+    background: #3b4252;
 }
 label {
-    color: black;
+    color: #eceff4;
     font-size: 15vw;
     font-family: 'Noto Sans', sans-serif;
 }
@@ -10,8 +10,6 @@ label, select, input {
     display: block;
 }
 select, input {
-    padding: 25px;
-    margin: 20px;
     margin-left:0px;
 }
 .container {
@@ -24,9 +22,8 @@ select, input {
 button {
     float: right;
     padding: 0px;
-    margin: 20px;
     margin-right: 0px;
-    color: black;
+    color: #eceff4;
     background: transparent;
     font-family: 'Noto Sans', sans-serif;
     font-size: 15vw;
