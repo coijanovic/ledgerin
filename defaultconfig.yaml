@@ -4,17 +4,11 @@
 hostip: 0.0.0.0
 hostport: 5000
 
-# 2. rclone
-remotename: Nextcloud
-remotepath: /accounting/
+# ledgerfile
+ledgerfile: ./data.ledger
 
 # 3. ledger
 currency: EUR
-accounts:
-- Assets:Checking
-- Expenses:Food
-- Income:Paycheck
-
 favs:
 - name: EDEKA
   from: Assets:Checking
@@ -25,9 +19,3 @@ favs:
 - name: Alnatura
   from: Assets:Checking
   to: Expenses:Food
-
-reports:
-- name: Balances
-  cmd: ledger bal -f data/finance.ledger -C Assets
-- name: Expenses this month
-  cmd: ledger bal -f data/finance.ledger -C --period="this month" Expenses
