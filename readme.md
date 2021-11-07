@@ -7,7 +7,14 @@ But its reliance on the command line make it not very accessible for "normal" pe
 
 ledgerinput is intended to be run as a local website (only accessible from within your home network) on a Raspberry Pi or something similar.
 
-# Install
+# Install (Podman/Docker)
+
+1. Build the container: `podman build -t ledgerin .` (in the repo's main folder)
+2. Run the container: `podman run -d -p 80:80 -v /path/to/ledgerfile/:/data/ ledgerweb`
+# Install (Direct)
+
+You can also use ledgerinput without docker.
+In that case, take the following steps:
 
 1. Setup `python3` with the following packages:
     - `flask`

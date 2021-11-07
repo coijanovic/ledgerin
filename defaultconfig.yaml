@@ -5,7 +5,7 @@ hostip: 0.0.0.0
 hostport: 5000
 
 # ledgerfile
-ledgerfile: ./data.ledger
+ledgerfile: /data/finance.ledger
 
 # 3. ledger
 currency: EUR
