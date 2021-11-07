@@ -10,7 +10,9 @@ ledgerinput is intended to be run as a local website (only accessible from withi
 # Install (Podman/Docker)
 
 1. Build the container: `podman build -t ledgerin .` (in the repo's main folder)
-2. Run the container: `podman run -d -p 80:80 -v /path/to/ledgerfile/:/data/ ledgerweb`
+2. Run the container: `podman run -d --net=host -v /path/to/ledgerfile/:/data/:Z ledgerweb`
+3. You may need to adjust your firewall settings to open the specified port
+
 # Install (Direct)
 
 You can also use ledgerinput without docker.
